@@ -111,6 +111,30 @@ addOne(numberOfPuppies);
 #### Returning Values in Functions
 You can have a function give you back a value to use later. Using return will immediately end a function.
 
+### Variable sCOPE
+
+The scope of a variable is how long a computer will remember it. A variable has global scope when it is declared outside a function - can be accessed everywhere.
+
+```JavaScript
+var awesomeGroup = 'Girl Develop It'; //Global scope
+function whatIsAwesome() {
+    console.log (awesomeGroup + ' is pretty awesome.'); //Will work
+}
+whatIsAwesome();
+
+```
+
+A variable with local scope can't be accessed outside of a function, as local scope means that it's defined within a function.
+
+```JavaScript
+function whatIsAwesome() {
+    var awesomeGroup = 'Girl Develop It'; //Local scope
+    console.log ('I made a variable called awesomeGroup with a value of ' + awesomeGroup); //Will work
+}
+whatIsAwesome();
+console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
+
+```
 
 ## Chart:
 
