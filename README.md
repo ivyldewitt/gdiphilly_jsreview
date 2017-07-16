@@ -136,8 +136,80 @@ console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
 
 ```
 
+### Conditional Logic
+
+**Booleans**
+- Boolean variables represent the values true and false.
+
+```JavaScript
+var isCuralateGreat = true
+var isBoardEffectGood = false
+// var isIvyPetty - definitely true!
+```
+
+Truthy & Falsy
+- If you true to use a value other than true or false in JS, it will evaluate them to 'truthy' or 'falsy'.
+
+Ex of Falsy values:
+* ""
+* undefined
+* null
+
+**If Statements**
+
+Use *if* to decide which lines of code to execute. Use *if-else* to execute multipole conditions and scenarios for your code.
+```JavaScript
+var age = 20;
+if (age >= 35) {
+    console.log('You can vote AND hold any place in government!');
+} else if (age >= 25) {
+    console.log('You can vote AND run for the Senate!');
+} else if (age >= 18) {
+    console.log('You can vote!');
+} else {
+    console.log('You can\'t vote, but you can still write your representatives.');
+}
+
+```
+**Logical Operators**
+
+These help to expand on our conditional statements - &&, ||, !var are all logical operators. Useful for ways to combine conditions.
+
+```JavaScript
+var bananas = 5;
+if (bananas >=2 && bananas <7) {
+    console.log('You have a reasonable number of bananas');
+} else {
+    console.log('Check your banana supply');
+}
+
+```
+
+**Arrays**
+
+Arrays are ordered lists of values, and we can use the length property to determine how many values are in an array.
+
+In JavaScript, we can put multiple types of values in an array.
+
+We can access items in an array w/bracket notation - array items start at 0.
+```JavaScript
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
+var firstColor = rainbowColors[0];
+var lastColor = rainbowColors[6];
+```
+
+**While Loops**
+
+
+
+
 ## Chart:
 
-*Data Types:* Number, String
-
-*Vocab:* Variable, Console, Data Type, Function, Argument, Return
+| Data Types    | Vocabulary    |
+| ------------- | ------------- |
+| Number        | Variable      |
+| String        | Console       |
+| Array         | Function      |
+|               | Argument      |
+|               | Return        |
