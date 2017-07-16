@@ -1,7 +1,7 @@
 html {
-  background: #67b26f; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #67b26f, #4ca2cd); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #67b26f, #4ca2cd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #B993D6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: rgba(52, 73, 94,1.0);
   font-family: 'Open Sans', sans-serif;
 }
@@ -14,11 +14,4 @@ html {
   height: 300px;
   text-align: center;
   border-radius: 2%;
-}
-
-
-hr.rule {
-    height: 12px;
-    border: 0;
-    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
 }
