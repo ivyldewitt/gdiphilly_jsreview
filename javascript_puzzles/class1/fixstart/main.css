@@ -1,0 +1,19 @@
+html {
+  font-family: 'Oswald', sans-serif;
+  background-color: rgba(189, 195, 199,0.4);
+  color: rgba(52, 73, 94,1.0);
+}
+
+h1 {
+  font-weight: 600;
+}
+
+.center {
+  background-color: rgba(26, 188, 156,0.3);
+  margin: 0 auto;
+  padding: 5%;
+  width: 40%;
+  height: 400px;
+  text-align: center;
+  border-radius: 5%;
+}
