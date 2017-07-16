@@ -3,12 +3,14 @@
 // Bonus: add error messages if the numbers are equal or cannot be compared.
 
 function greatestNumber(num1, num2) {
-  if (num1 > num2) {
-    return `${num1} is the greatest number.`;
-  } else if (num1 == num2){
+  if (num1 === num2) {
     return `These two numbers are equal`;
+  } else if (num1 > num2) {
+    return `${num1} is the greatest number.`;
+  } else if (num2 > num1) {
+    return `${num2} is the greatest number.`;
   } else {
-    return `${num2} is the greatest number.`
+    return `I don't know what to do with these numbers!`;
   }
 }
 
