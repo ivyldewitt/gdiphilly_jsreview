@@ -23,16 +23,23 @@ var books = [
     alreadyRead: false,
   }
 ]
+
+var bookList = `<ul>`
 function readingList(arr) {
   for (var i = 0; i < books.length; i++) {
     var book = books[i];
 
     if (book.alreadyRead === true) {
-      console.log(`You have already read ${book.title} by ${book.author}.`);
+      bookList += `<li>You have already read ${book.title} by ${book.author}.</li>`;
     } else {
-      console.log(`You still need to read ${book.title} by ${book.author}.`);
+      bookList += `<li>You still need to read ${book.title} by ${book.author}.</li>`;
     }
   }
+  bookList += `</ul>`;
+  document.getElementById('serious').innerHTML = bookList;
+  console.log(bookList);
 }
+
+
 
 readingList(books);

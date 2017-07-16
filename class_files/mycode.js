@@ -142,3 +142,20 @@ function listReceipe(recipe) {
 }
 
 listReceipe(myRecipe);
+
+
+// 8. Events
+
+var myButton = document.getElementById('clickme');
+
+myButton.onclick=function() {
+  console.log("Whoa, you clicked me! That's heavy brah.");
+}
+
+// 9. Forms
+var submit = document.getElementById('submit');
+submit.onclick=function(event) {
+  event.preventDefault();
+  var nameVal = document.getElementById('name').value;
+  document.getElementById('newName').innerHTML = `I see that your name is ${nameVal}! Nice to meet you!`;
+}

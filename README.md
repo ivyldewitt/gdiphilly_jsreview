@@ -284,6 +284,169 @@ describeCat(WillaTheCat);
 
 ```
 
+**Object Methods**
+
+Objects can also be used to hold functions - which are called using dot notation.
+
+```JavaScript
+Objects can also hold functions.
+
+var WillaTheCat = {
+  age: 8,
+  furColor: 'orange',
+  meow: function() {
+    console.log('meowww');
+  },
+  eat: function(food) {
+    console.log('Yum, I love ' + food);  
+  }
+};
+```
+
+**Anatomy of a Website**
+
+We have HTML: structure, CSS: presentation, and JavaScript: interactivity.
+
+IDs vs Classes:
+
+* IDs are a unique value on a webpage.
+* Class - lots of elements can have the same class.
+
+**The Dom Tree**
+
+The Document Object Model - aka the way we interact with a web page. It serves as a tree
+or map to how we interact with elements on a page.
+
+Accessing the Dom:
+
+The browser automatically creates a document object to store the DOM on a web page. To find and manipulate the DOM do the following steps:
+
+1. Find the DOM node (HTML element) and store it in a variable.
+2. Use methods to manipulate the node.
+
+We can get elements by ID as we've seen many times, and we can also get them by the element tag name. Example below:
+```JavaScript
+var listItems = document.getElementsByTagName('li');
+for (var i =0; i < listItems.length; i++) {
+  var listItem = listItems[i];
+}
+```
+Since HTML5, we can also access by additional methods such as getElementsByClassName and querySelector.
+
+```JavaScript
+document.getElementsByClassName(className);
+document.querySelector(cssQuery);
+document.querySelectorAll(cssQuery);
+```
+Link to documentation on the [querySelector](https://developer.mozilla.org/en-US/Add-ons/Code_snippets/QuerySelector)
+
+**Gentlement vs Gentlements**
+
+If you're using a method w/getElements it will return an array of nodes. You'll need to select them individually using the same bracket notation as you would with an array.
+
+```JavaScript
+document.getElementsByTagName('p'); //returns multiple nodes
+var specficParagraph = document.getElementsByTagName('p')[2];
+
+```
+
+**DOM Attribute Manipulation**
+
+We can change the src of an image using DOM manipulation.
+
+```JavaScript
+<img id="kittenPic" src="http://placekitten.com/200/300" alt="cat"/>
+
+var imgKitten = document.getElementById('kittenPic');
+var oldSrc = imgKitten.src;
+imgKitten.src = 'http://placekitten.com/100/500';
+
+```
+*Or* we could change this using the getAttribute/setAttribute methods.
+
+```JavaScript
+var imgKitten = document.getElementById('kittenPic');
+var oldSrc = imgKitten.getAttribute('src');
+imgKitten.setAttribute('src', 'http://placekitten.com/100/500');
+
+```
+
+**Create New Nodes**
+
+If we need to create new nodes from scratch we can use the following syntax:
+
+```JavaScript
+
+document.createElement(tagName); //Create the node
+document.createTextNode(text); //Adding text
+document.appendChild(); //Appending to an element
+```
+
+Below is an example in action.
+```JavaScript
+var pageNode = document.getElementsByTagName('body')[0];
+
+var newImg = document.createElement('img');
+newImg.src = 'http://placekitten.com/400/300';
+newImg.style.border = '1px solid black';
+pageNode.appendChild(newImg);
+
+var newParagraph = document.createElement('p');
+var paragraphText = document.createTextNode('Squee!');
+newParagraph.appendChild(paragraphText);
+pageNode.appendChild(newParagraph);
+
+```
+
+**Events**
+
+An event is a type of object that is created when a user interacts with a web page. Ex: 'clicking on an element' is an unique event.
+
+```JavaScript
+element.onclick = function () {
+  //do something awesome
+};
+
+```
+
+You can check out more JS click events here: [JS Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
+
+**Best Practice - Listening Functions**
+
+Listening functions work similarly to many other functions we've done before. Find the object and add the listening function.
+
+```JavaScript
+var myTarget = document.getElementById('clickMe');
+
+myTarget.onclick=function(){
+     alert ('Hi!');
+}
+
+```
+
+**Forms**
+
+You can collect information from users to use in functions. The most common method is an HTML form.
+
+We can retrieve values from form elements using the *value* property.
+```JavaScript
+var temperature = document.getElementById('temp').value;
+console.log (temperature);
+
+```
+If you're using submit buttons - you should use the preventDefault() action!
+
+```JavaScript
+var submitButton = document.getElementById('tempSubmitButton');
+submitButton.onclick = function () {
+    event.preventDefault();
+    var temperature = document.getElementById('temp').value;
+    console.log (temperature);
+}
+     
+```
+
+
 ## Chart:
 
 | Data Types    | Vocabulary    |
