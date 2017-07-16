@@ -201,8 +201,88 @@ var lastColor = rainbowColors[6];
 
 **While Loops**
 
+While loops will repeat the same line of code until the condition ends.
 
+**For Loops**
 
+For loops are similar to while loops but we declare a counter in the statement.
+
+We can use for loops to iterate through arrays such as the code below:
+
+```JavaScript
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+for (var i = 0; i < rainbowColors.length; i++) {
+  console.log(rainbowColors[i]);
+}              
+
+```
+
+*Note: Beware the Infinite Loop - cause by code that doesn't have an end condition*
+
+**Aside: Updating Elements in the Dom**
+Some really neat code below on how to update elements via the DOM. A nice way to do so without the headaches I was getting trying to update via
+```JavaScript
+var foodString = '<ul> ';
+for (var i = 0; i < myFavoriteFoods.length; i++) {
+  var index = myFavoriteFoods.indexOf(myFavoriteFoods[i]) + 1;
+  foodString += '<li>' + myFavoriteFoods[i] + '</li>';
+  console.log(foodString); //We can see how the string updates;
+}
+foodString += '</ul>';
+
+document.getElementById('foods').innerHTML = foodString;
+console.log(foodString);
+```
+
+### Objects
+
+Objects let us store a collection of properties.
+
+```JavaScript
+var objectName = {
+  propertyName: propertyValue,
+  propertyName: propertyValue,
+  ...
+};
+
+```
+One of the benefits of objects is that they can store multiple properties such as other objects.
+
+```JavaScript
+var aboutMe = {
+  hometown: 'Somewhere in Texas',
+  hair: 'brown, usually short',
+  likes: ['kittens', 'code', 'dancing'],
+  birthday: {month: 4, day: 17}
+};
+```
+
+Access objects using bracket or dot notation.
+
+```JavaScript
+var myHometown = aboutMe.hometown //document
+
+var myHair = aboutMe['hair'] //bracket
+
+aboutMe.hair = 'black' //updating values
+```
+Objects can also be used as function arguments to pass into other data types:
+
+```JavaScript
+var WillaTheCat = {
+  age: 8,
+  furColor: 'orange',
+  likes: ['catnip', 'tofurky', 'tuna'],
+  birthday: {month: 3, day: 10, year: 2008}
+}
+
+function describeCat(cat) {
+  console.log('This cat is ' + cat.age + ' years old with ' + cat.furColor + ' fur.');
+}
+
+describeCat(WillaTheCat);
+
+```
 
 ## Chart:
 
@@ -211,5 +291,7 @@ var lastColor = rainbowColors[6];
 | Number        | Variable      |
 | String        | Console       |
 | Array         | Function      |
-|               | Argument      |
-|               | Return        |
+| Boolean       | Argument      |
+| Objects       | Return        |
+|               | If Statement  |
+|               | Loops         |

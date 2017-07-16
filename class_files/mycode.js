@@ -1,5 +1,3 @@
-
-
 // 1. Intro
 console.log('This is a sad, lonely comment.');
 document.getElementById('headline').innerHTML = `What's up JavaScripters?`;
@@ -54,7 +52,7 @@ var singer = sayMyName('Ariana', 'Grande', 'singer');
 sayMyName('Carly Rae', 'Jespen');
 sayMyName('Azaelia', 'Banks', 'rapper');
 
-alert(greenLight);
+//alert(greenLight);
 document.getElementById('songstress').innerHTML = singer;
 console.log(singer);
 
@@ -82,14 +80,65 @@ temp(degrees);
 
 var myFavoriteFoods = ['sushi', 'pasta', 'pizza', 'hamburgers', 'nachos'];
 
-console.log(myFavoriteFoods[3]);
-console.log(myFavoriteFoods[2]);
-console.log(myFavoriteFoods[5]); //Undefined b/c there's no 5th item!
-console.log(myFavoriteFoods[4]);
+// console.log(myFavoriteFoods[3]);
+// console.log(myFavoriteFoods[2]);
+// console.log(myFavoriteFoods[5]); //Undefined b/c there's no 5th item!
+// console.log(myFavoriteFoods[4]);
 
 myFavoriteFoods[2] = 'curry';
 console.log(myFavoriteFoods[2]);
 myFavoriteFoods.push('ice cream');
 console.log(myFavoriteFoods);
 myFavoriteFoods.push('pad thai');
-document.getElementById('foods').innerHTML = myFavoriteFoods[6];
+myFavoriteFoods.push('muffaletta');
+
+// var foodString = ' ';
+// for (var i = 0; i < myFavoriteFoods.length; i++) {
+//   var index = myFavoriteFoods.indexOf(myFavoriteFoods[i]) + 1;
+//   // console.log(index + ': ' + myFavoriteFoods[i])
+//   if (index === myFavoriteFoods.length) {
+//     foodString += myFavoriteFoods[i] + '.';
+//   } else {
+//     foodString += myFavoriteFoods[i] + ', ';
+//   }
+// }
+//
+// document.getElementById('foods').innerHTML = foodString;
+
+
+var foodString = '<ul> ';
+for (var i = 0; i < myFavoriteFoods.length; i++) {
+  var index = myFavoriteFoods.indexOf(myFavoriteFoods[i]) + 1;
+  foodString += `<li> <strong>${index}:</strong> ${myFavoriteFoods[i]}</li>`;
+  // console.log(foodString); //We can see how the string updates;
+}
+foodString += '</ul>';
+
+document.getElementById('foods').innerHTML = foodString;
+console.log(foodString);
+
+
+// 7. Objects
+var myRecipe = {
+  recipeTitle: 'Puttanesca',
+  servings: 5,
+  ingredients: ['pasta', 'tomato sauce', 'olives', 'mozarella cheese', 'onions', 'peppers', 'red wine']
+}
+
+var myString = "<ul>";
+
+var ingredients = myRecipe.ingredients;
+//func receipeList()
+
+function listReceipe(recipe) {
+  var myString = "<ul>";
+  var ingredients = myRecipe.ingredients;
+  for (var i = 0; i < ingredients.length; i++) {
+    myString += `<li>${ingredients[i]}</li>`;
+  }
+  myString += `</ul>`;
+  var receipeStr = `<h5><em>Receipe Title: ${myRecipe.recipeTitle}</em></h5> <p>Servings: ${myRecipe.servings}</p> ${myString}`
+  document.getElementById('recipe').innerHTML = receipeStr;
+}
+
+listReceipe(myRecipe);
