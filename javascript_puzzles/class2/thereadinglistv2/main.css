@@ -1,0 +1,26 @@
+html {
+  color: rgba(52, 73, 94,1.0);
+  font-family: 'Open Sans', sans-serif;
+  background: #360033;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#stylized {
+  background-color: rgba(236, 240, 241,1.0);
+  margin: 20px auto;
+  padding: 5%;
+  width: 40%;
+  height: 80%;
+  border-radius: 25px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+a {
+  color: #FF946A;
+  text-decoration: none;
+}

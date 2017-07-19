@@ -16,10 +16,15 @@ background: linear-gradient(to right, #ffc500, #c21500); /* W3C, IE 10+/ Edge, F
   border-radius: 25px;
 }
 
-h1, p {
+h1 {
     text-align: center;
 }
 
 h1 {
   text-transform: uppercase;
+}
+
+a {
+  color: #7F4C67;
+  text-decoration: none;
 }
